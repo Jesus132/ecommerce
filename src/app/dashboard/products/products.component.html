@@ -1,13 +1,11 @@
 <div class="products_list">
-  <!-- <div class="categories" *ngFor="let item of list">
+  <div class="categories" *ngFor="let categorie of shop">
     <div class="title_categories">
-      {{item.name}}
+      {{categorie.name}}
     </div>
-    <span *ngIf="true">
-        <app-card-kind1 [product]="product" *ngFor="let product of item.products"></app-card-kind1>
+    <span *ngFor="let product of categorie.products">
+        <app-card-kind1 [product]="product.product_data" *ngIf="product.product_data.kind == 1"></app-card-kind1>
+        <app-card-kind2 [product]="product.product_data" *ngIf="product.product_data.kind == 2"></app-card-kind2>
     </span>
-    <span *ngIf="false">
-        <app-card-kind2 [product]="product" *ngFor="let product of item.products"></app-card-kind2>
-    </span>
-  </div> -->
+  </div>
 </div>

@@ -1,14 +1,20 @@
-.products_list{
+.products_list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px;
+
+  .categories {
     width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
 
-    .categories{
-        width: 80%;
-        display: flex;
-        flex-direction: column;
+    .title_categories {
+      font-size: 16px;
+      color: #0571ff;
+      margin-bottom: 8px;
+      border-bottom: 1px solid #ccc;
     }
+  }
 
 }
