@@ -33,9 +33,9 @@ export class ProductsComponent implements OnInit {
         }).map(item => ({
           ...item,
           products: resp.products.filter(product => product.product_data.categories.map(categorie => categorie.category_id).includes(item.id)).sort((i, j) => {
-            if ((i.product_data.ordinal || 9999) > (j.product_data.ordinal || 9999)) {
+            if ((i.product_data.categories[0].ordinal) > (j.product_data.categories[0].ordinal)) {
               return 1;
-            } else if ((i.product_data.ordinal || 9999) < (j.product_data.ordinal || 9999)) {
+            } else if ((i.product_data.categories[0].ordinal) < (j.product_data.categories[0].ordinal)) {
               return -1;
             }
             return 0;
