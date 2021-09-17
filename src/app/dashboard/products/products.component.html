@@ -1,0 +1,11 @@
+<div class="products_list">
+  <div class="categories" *ngFor="let categorie of shop">
+    <div class="title_categories">
+      {{categorie.name}}
+    </div>
+    <span *ngFor="let product of categorie.products">
+        <app-card-kind1 [product]="product.product_data" *ngIf="product.product_data.kind == 1"></app-card-kind1>
+        <app-card-kind2 [product]="product.product_data" *ngIf="product.product_data.kind == 2"></app-card-kind2>
+    </span>
+  </div>
+</div>
