@@ -18,8 +18,6 @@ export class CardKind2Component implements OnInit {
   }
   
   ngOnInit(): void {
-    console.log(this.product);
-    
     this.img = `https://assets.compramass.com/products/${this.product.ean}@3x.jpg`;
     this.title = this.product.name;
     this.price = (this.product.price).toLocaleString('es-CO', {
